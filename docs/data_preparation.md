@@ -38,8 +38,3 @@ The pretrained weights can be downloaded from [swin_tiny_patch4_window7_224.pth]
 [swin_small_patch4_window7_224.pth](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/wangtq_connect_hku_hk/EZo0zaavPplLkJsjvQ94agQBUNEDbnQ9724Vw2FECRfcKA),
 [beverse_tiny.pth](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/wangtq_connect_hku_hk/Ea0ToSxXuq5Ev8-lco4x7zIBv7ENUf764N8JJxmrXzkEeQ),
 [beverse_small.pth](https://connecthkuhk-my.sharepoint.com/:u:/g/personal/wangtq_connect_hku_hk/EdSBp8ZTP2hDhxYmjRjr1iUB5sblbWfQyOQM0_lqeJKVZw).
-
-
-```bash
-python tools/create_data.py carla --root-path ./data/DeepAccident_data --out-dir ./data/DeepAccident_data --extra-tag carla
-```
