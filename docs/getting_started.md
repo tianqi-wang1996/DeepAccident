@@ -4,13 +4,13 @@
 To train the models on DeepAccident with 8 GPUs, run:
 ```bash
 bash tools/dist_train.sh $CONFIG 8 --work-dir $WORK_DIR
-e.g. bash tools/dist_train.sh projects/configs/DeepAccident_tiny.py 8 --work-dir work_dirs/DeepAccident_tiny
+e.g. bash tools/dist_train.sh projects/configs/DeepAccident_tiny.py 8 --load-from ./data/DeepAccident_data/beverse_tiny.pth --work-dir work_dirs/DeepAccident_tiny
 ```
 
 To train the models on DeepAccident with single GPU, run:
 ```bash
 python tools/train.py $CONFIG
-e.g. python tools/train.py projects/configs/DeepAccident_tiny.py --work-dir work_dirs/DeepAccident_tiny
+e.g. python tools/train.py projects/configs/DeepAccident_tiny.py --load-from ./data/DeepAccident_data/beverse_tiny.pth --work-dir work_dirs/DeepAccident_tiny
 ```
 
 ## Evaluation

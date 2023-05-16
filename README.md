@@ -22,19 +22,7 @@ Please check [installation](docs/installation.md) for installation and [data_pre
 ## Getting Started
 Please check [getting_started](docs/getting_started.md) for training, evaluation, and visualization of DeepAccident.
 
-## Task Visualization
-
-[//]: # (![visualization]&#40;figs/First_video.mp4 "Results on nuScenes"&#41;)
-<video width="100%" height="100%" controls>
-  <source src="figs/First_video.mp4" type="video/mp4">
-  Task Visualization.
-</video>
-
-<video width="100%" height=auto loop autoplay muted>
-    <source src="figs/First_video.mp4" type="video/mp4">
-    Task Visualization.
-</video>
-
+## Motion & Accident prediction from Multi-View Images
 ![visualization](figs/First_video.gif "Task Visualization")
 
 ## V2XFormer for perception & prediction
