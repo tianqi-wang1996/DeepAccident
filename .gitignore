@@ -49,6 +49,7 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+.pytest_cache/**
 
 # Translations
 *.mo
@@ -128,3 +129,7 @@ mmdet3d/.mim
 # demo
 *.obj
 *.ply
+
+# Claude Code settings
+.claude/
+.claude/*
