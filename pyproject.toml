@@ -1,0 +1,92 @@
+[tool.poetry]
+name = "mmdet3d"
+version = "1.0.0"
+description = "OpenMMLab's next-generation platform for general 3D object detection."
+authors = ["MMDetection3D Contributors <zwwdev@gmail.com>"]
+license = "Apache License 2.0"
+readme = "README.md"
+homepage = "https://github.com/open-mmlab/mmdetection3d"
+repository = "https://github.com/open-mmlab/mmdetection3d"
+keywords = ["computer vision", "3D object detection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+# Project dependencies commented out for compatibility 
+# Install them manually using pip if needed
+# The testing infrastructure works independently
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+
+# Poetry scripts are not used - run 'poetry run pytest' directly
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=mmdet3d",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=80",
+    "-v"
+]
+markers = [
+    "unit: marks tests as unit tests (deselect with '-m \"not unit\"')",
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')"
+]
+minversion = "6.0"
+
+[tool.coverage.run]
+source = ["mmdet3d"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/migrations/*",
+    "*/venv/*",
+    "*/.venv/*",
+    "*/node_modules/*",
+    "*/.tox/*",
+    "*/build/*",
+    "*/dist/*",
+    "setup.py"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "@abstractmethod",
+    "@abc.abstractmethod"
+]
+show_missing = true
+precision = 2
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"
